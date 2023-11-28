@@ -16,3 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('dashboard');
 });
+
+Route::get('/WaitingList', function () {
+    return view('waitingList');
+});
+
+Route::get('/BorrowedBooks', function () {
+    return view('dashboard');
+});
+
+Route::get('/History', function () {
+    return view('waitingList');
+});
