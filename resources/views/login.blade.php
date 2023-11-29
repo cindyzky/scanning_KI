@@ -1,7 +1,7 @@
 @extends('layouts.user')
 
 @section('form')
-            <form action="">
+            <form action="/submit" method="post">
                 <h1>Login</h1>
                 <hr>
                 <label for="">Email</label>
@@ -18,5 +18,5 @@
 @endsection
 
 @section('button')
-    <button>Login</button>
+    <button type="submit">Login</button>
 @endsection
