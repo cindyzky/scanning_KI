@@ -229,6 +229,7 @@ nav .profile-details i {
         margin: 0;
     }
 }
+
 @media (max-width: 1000px) {
     .overview-boxes .box {
         width: calc(100% / 2 - 15px);

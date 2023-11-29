@@ -22,9 +22,9 @@ Route::get('/WaitingList', function () {
 });
 
 Route::get('/BorrowedBooks', function () {
-    return view('dashboard');
+    return view('borrowedBooks');
 });
 
 Route::get('/History', function () {
-    return view('waitingList');
+    return view('history');
 });
