@@ -14,7 +14,7 @@ class BookController extends Controller
     public function index()
     {
         $books = Book::all();
-        return view('books.index', compact('books'));
+        return view('borrowedBooks', compact('books'));
     }
 
     /**
@@ -50,7 +50,7 @@ class BookController extends Controller
         $book->image_path = $imageName;
         $book->save();
 
-        return redirect('/books')->with('success', 'Book created successfully.');
+        return redirect('/borrowedBooks')->with('success', 'Book created successfully.');
     }
 
     /**
