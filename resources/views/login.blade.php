@@ -18,5 +18,7 @@
 @endsection
 
 @section('button')
-    <button type="submit">Login</button>
+    <a href="/" class="to-dashboard">
+        <button type="submit">Login</button>
+    </a>
 @endsection
