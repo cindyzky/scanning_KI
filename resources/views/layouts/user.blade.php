@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <link rel="stylesheet" href="css/userStyle.css" />
+    <link rel="stylesheet" href="{{ asset('css/userStyle.css') }}">
 </head>
 
 <body>
