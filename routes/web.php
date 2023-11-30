@@ -34,3 +34,8 @@ Route::get('/BorrowedBooks', [BookController::class, 'index']);
 Route::get('/History', function () {
     return view('history');
 });
+
+Route::get('/Homepage', function () {
+    return view('homepage');
+});
+
