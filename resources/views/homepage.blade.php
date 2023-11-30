@@ -10,57 +10,48 @@
       crossorigin="anonymous"
     ></script>
   </head>
+
   <body>
     <div class="UI-design-homepage">
-      <div class="div">
-        <img class="rectangle" src="img/SoloLeveling.jpeg" />
-        <div class="overlap">
-          <div class="rectangle-2"></div>
-          <img class="DOWNLOAD-FILM" src="img/LaskasPelangi.jpeg" />
-        </div>
-        <div class="overlap-group">
-          <button class="button-read-more">Read More</button>
-        </div>
-        <div class="div-wrapper">
-          <button class="button-login">LOGIN</button>
-        </div>
-        <div class="text-wrapper-3">&lt;</div>
-        <div class="text-wrapper-4">&lt;</div>
+      <!-- Logo Filkom  -->
+        <img class="logo-filkom" src="img/LogoFilkom.png" />
+      <!-- Login -->
+      <div class="div-wrapper">
+        <button class="button-login">LOGIN</button>
+      </div>
 
-        <!-- Search bar -->
-        <div class="search-container">
-          <form onsubmit="searchFunction(event)">
+      <!-- Logo Ruang Baca-->
+        <img class="logoruangbaca" src="img/LogoRuangBaca.png" />
+
+      <!-- Search bar -->
+      <div class="search-container">
+        <form onsubmit="searchFunction(event)">
             <input
               class="search-input"
               type="text"
               id="searchInput"
               placeholder="Cari Judul Buku, Penulis"
-            />
+              />
             <button type="submit" class="search-button">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
-          </form>
-        </div>
+        </form>
+      </div>
 
-        <div class="overlap-2">
-          <div class="rectangle-3"></div>
-          <img class="java-programming" src="img/JavaProgramming.jpeg" />
-        </div>
-        <div class="overlap-3">
-          <div class="rectangle-2"></div>
-          <img class="python-programming" src="img/PythonProgramming.jpeg" />
-        </div>
-        <div class="overlap-4">
-          <div class="rectangle-2"></div>
-          <img
-            class="omniscient-reader-s"
-            src="img/OmniscientReadersViewpoint.jpeg"
-          />
-        </div>
-        <img class="logo-filkom" src="img/LogoFilkom.png" />
-        <div class="logoruangbaca-wrapper">
-          <img class="logoruangbaca" src="img/LogoRuangBaca.png" />
-        </div>
+      <!-- SLIDE -->
+      <div class="slide-nya">
+            <img class="slide1" src="img/SoloLeveling.jpeg" />
+            <img class="slide2" src="img/LaskasPelangi.jpeg" />
+            <img class="slide3" src="img/JavaProgramming.jpeg" />
+            <img class="slide4" src="img/PythonProgramming.jpeg" />
+            <img class="slide5" src="img/OmniscientReadersViewpoint.jpeg"/>
+            <div class="text-wrapper-3">&lt;</div>
+            <div class="text-wrapper-4">&lt;</div>
+      </div>
+
+      <!-- Read More -->
+      <div class="overlap-group">
+        <button class="button-read-more">Read More</button>
       </div>
     </div>
   </body>
