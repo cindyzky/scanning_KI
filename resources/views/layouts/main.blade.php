@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<!-- Website - www.codingnepalweb.com -->
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <title>RuangBaca</title>
-    <link rel="stylesheet" href="css/mainStyle.css" />
+    <link rel="stylesheet" href="{{ asset('css/mainStyle.css') }}" />
     <!-- Boxicons CDN Link -->
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,7 +13,7 @@
   <body>
     <div class="sidebar">
       <div class="logo-details">
-      <img class="logo-RB" src="img/LogoRuangBaca.png" />
+      <img class="logo-RB" src="{{ asset('img/LogoRuangBaca.png') }}" />
       </div>
       <ul class="nav-links">
         <li>
@@ -49,6 +48,7 @@
         </li>
       </ul>
     </div>
+
     <section class="home-section">
       <nav>
         <div class="sidebar-button">
@@ -62,17 +62,18 @@
                 <i class="fa-regular fa-bell fa-2xl"></i>
         </div>
         <div class="profile-details">
-          <img class="ellipse" src="img/profile.jpeg" alt="" />
+          <img class="ellipse" src="{{ asset('img/profile.jpeg') }}" alt="" />
           <span class="admin_name">Kim Dokja</span>
           <i class="bx bx-chevron-down"></i>
         </div>
       </nav>
-        </div>
-      </div>
-    </section>
-    <div class="main-content">
+      <div class="main-content">
         @yield('content') 
     </div>
+    </section>
+  </div>
+</div>
+    
 
     <script>
       let sidebar = document.querySelector(".sidebar");

@@ -56,9 +56,12 @@ class BookController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Book $book)
+    public function show(Book $detail)
     {
-        return view('books.show', compact('book'));
+        return view('bookDetails', [
+            "title" => "Details",
+            "bookDetail" => $detail
+        ]);
     }
 
     /**
