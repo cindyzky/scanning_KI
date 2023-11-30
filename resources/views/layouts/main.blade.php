@@ -18,7 +18,7 @@
       </div>
       <ul class="nav-links">
         <li>
-          <a href="/" class="active">
+          <a href="/Dashboard" class="active">
             <i class="bx bx-grid-alt"></i>
             <span class="links_name">Dashboard</span>
           </a>
@@ -42,7 +42,7 @@
           </a>
         </li>
         <li class="log_out">
-          <a href="#">
+          <a href="/">
             <i class="bx bx-log-out"></i>
             <span class="links_name">Log out</span>
           </a>

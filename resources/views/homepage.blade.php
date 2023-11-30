@@ -17,7 +17,9 @@
         <img class="logo-filkom" src="img/LogoFilkom.png" />
       <!-- Login -->
       <div class="div-wrapper">
-        <button class="button-login">LOGIN</button>
+        <a href="/login" class="to-dashboard">
+          <button class="button-login">LOGIN</button>
+        </a>
       </div>
 
       <!-- Logo Ruang Baca-->

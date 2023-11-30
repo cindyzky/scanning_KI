@@ -14,7 +14,7 @@ use App\Http\Controllers\BookController;
 */
 
 Route::get('/', function () {
-    return view('dashboard');
+    return view('homepage');
 });
 
 Route::get('/login', function () {
@@ -23,6 +23,10 @@ Route::get('/login', function () {
 
 Route::get('/register', function () {
     return view('register');
+});
+
+Route::get('/Dashboard', function () {
+    return view('dashboard');
 });
 
 Route::get('/WaitingList', function () {
@@ -35,7 +39,4 @@ Route::get('/History', function () {
     return view('history');
 });
 
-Route::get('/Homepage', function () {
-    return view('homepage');
-});
 
