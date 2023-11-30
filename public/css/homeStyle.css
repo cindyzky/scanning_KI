@@ -1,0 +1,296 @@
+.UI-design-homepage {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .UI-design-homepage .div {
+    background-color: #ffffff;
+    width: 1440px;
+    height: 1024px;
+    position: relative;
+  }
+
+  .UI-design-homepage .rectangle {
+    top: 581px;
+    left: 142px;
+    object-fit: cover;
+    position: absolute;
+    width: 196px;
+    height: 266px;
+  }
+
+  .UI-design-homepage .overlap {
+    position: absolute;
+    width: 206px;
+    height: 267px;
+    top: 580px;
+    left: 381px;
+  }
+
+  .UI-design-homepage .rectangle-2 {
+    position: absolute;
+    width: 196px;
+    height: 266px;
+    top: 1px;
+    left: 0;
+    background-color: #d9d9d9;
+  }
+
+  .UI-design-homepage .line {
+    position: absolute;
+    width: 197px;
+    height: 267px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+
+  .UI-design-homepage .DOWNLOAD-FILM {
+    position: absolute;
+    width: 205px;
+    height: 266px;
+    top: 1px;
+    left: 1px;
+    object-fit: cover;
+  }
+
+  .UI-design-homepage .overlap-group {
+    position: absolute;
+    width: 178px;
+    height: 53px;
+    top: 915px;
+    left: 631px;
+    background-color: #5ccae5;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px #00000040;
+  }
+
+  .UI-design-homepage .button-read-more,
+  .UI-design-homepage .button-login {
+    width: 178px;
+    height: 53px;
+    padding: 10px 20px;
+    font-family: "Montserrat-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #1a1f23;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    border: none;
+    border-radius: 20px;
+    background-color: #5ccae5;
+    box-shadow: 0px 4px 4px #00000040;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .UI-design-homepage .button-login {
+    width: 166px;
+    height: 49px;
+    font-size: 20px;
+  }
+
+  .UI-design-homepage .button-read-more:hover,
+  .UI-design-homepage .button-login:hover {
+    background-color: rgb(222, 73, 19);
+    color: #ffffff;
+  }
+
+  .UI-design-homepage .div-wrapper {
+    position: absolute;
+    width: 166px;
+    height: 49px;
+    top: 60px;
+    left: 1231px;
+    background-color: #5ccae5;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px #00000040;
+  }
+
+  .UI-design-homepage .text-wrapper-3 {
+    left: 56px;
+    position: absolute;
+    top: 681px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 64px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+
+  .UI-design-homepage .text-wrapper-4 {
+    width: 39px;
+    left: 1341px;
+    transform: rotate(180deg);
+    position: absolute;
+    top: 681px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 64px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+
+  .UI-design-homepage .overlap-group-2 {
+    position: absolute;
+    width: 755px;
+    height: 40px;
+    top: 460px;
+    left: 343px;
+    background-color: #ffffff;
+    border-radius: 50px;
+    border: 2px solid;
+    border-color: #000000;
+  }
+
+  .UI-design-homepage .download {
+    position: absolute;
+    width: 34px;
+    height: 31px;
+    top: 9px;
+    left: 705px;
+    object-fit: cover;
+  }
+
+  .UI-design-homepage .text-wrapper-5 {
+    position: absolute;
+    top: 5px;
+    left: 22px;
+    font-family: "Montserrat-Medium", Helvetica;
+    font-weight: 500;
+    color: #1a1f2380;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+
+  .search-container {
+    position: relative;
+    width: 500px;
+    margin: 0 auto;
+    top: 500px;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    border-radius: 20px;
+    border: 2px solid #000000;
+    font-size: 16px;
+  }
+
+  .search-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  .UI-design-homepage .overlap-2 {
+    position: absolute;
+    width: 223px;
+    height: 267px;
+    top: 580px;
+    left: 614px;
+  }
+
+  .UI-design-homepage .rectangle-3 {
+    top: 1px;
+    left: 7px;
+    background-color: #d9d9d9;
+    position: absolute;
+    width: 196px;
+    height: 266px;
+  }
+
+  .UI-design-homepage .img {
+    position: absolute;
+    width: 197px;
+    height: 267px;
+    top: 0;
+    left: 7px;
+    object-fit: cover;
+  }
+
+  .UI-design-homepage .java-programming {
+    position: absolute;
+    width: 223px;
+    height: 266px;
+    top: 1px;
+    left: 0;
+    object-fit: cover;
+  }
+
+  .UI-design-homepage .overlap-3 {
+    position: absolute;
+    width: 206px;
+    height: 267px;
+    top: 580px;
+    left: 861px;
+  }
+
+  .UI-design-homepage .python-programming {
+    position: absolute;
+    width: 206px;
+    height: 266px;
+    top: 1px;
+    left: 0;
+    object-fit: cover;
+  }
+
+  .UI-design-homepage .overlap-4 {
+    position: absolute;
+    width: 197px;
+    height: 267px;
+    top: 580px;
+    left: 1103px;
+  }
+
+  .UI-design-homepage .omniscient-reader-s {
+    position: absolute;
+    width: 196px;
+    height: 266px;
+    top: 1px;
+    left: 1px;
+    object-fit: cover;
+  }
+
+  .UI-design-homepage .logo-filkom {
+    position: absolute;
+    width: 248px;
+    height: 57px;
+    top: 3px;
+    left: 0;
+    object-fit: cover;
+  }
+
+  .UI-design-homepage .logoruangbaca-wrapper {
+    position: absolute;
+    width: 310px;
+    height: 310px;
+    top: 150px;
+    left: 571px;
+    background-image: url(./img/logoruangbaca.png);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+
+  .UI-design-homepage .logoruangbaca {
+    position: absolute;
+    width: 310px;
+    height: 310px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
