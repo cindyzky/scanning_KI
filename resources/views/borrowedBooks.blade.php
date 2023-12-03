@@ -12,7 +12,7 @@
         </div>
     @else
     <div class="books" id='borrowedBooks'>
-        <article class="mb-5 border-bottom">
+        <article>
         <h1>List of Books</h1>
         @foreach($books as $book)
         <div class="book-item">
