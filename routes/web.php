@@ -1,8 +1,12 @@
 <?php
 
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\DashboardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,17 +18,15 @@ use App\Http\Controllers\CategoryController;
 |
 */
 
-Route::get('/', function () {
-    return view('homepage');
-});
+Route::get('/', [BookController::class, 'indexHome']);
 
-Route::get('/login', function () {
-    return view('login');
-});
+Route::get('/register', [RegisterController::class, 'index']);
+Route::post('/register', [RegisterController::class, 'store']);
 
-Route::get('/register', function () {
-    return view('register');
-});
+Route::get('/login', [LoginController::class, 'index']);
+Route::post('/login', [LoginController::class, 'authenticate']);
+
+Route::get('/Dashboard', [DashboardController::class, 'index']);
 
 Route::get('/WaitingList', function () {
     return view('waitingList');
@@ -46,7 +48,6 @@ Route::get('/History', function () {
     return view('history');
 });
 
-Route::get('/Dashboard', function () {
-    return view('dashboard');
-});
+
+
 

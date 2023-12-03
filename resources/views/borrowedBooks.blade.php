@@ -6,6 +6,11 @@
 @endsection
 
 @section('content')
+    @if($books->isEmpty())
+        <div class="not-found">
+            <h1>Book not found!!! Please try another keyword</h1>
+        </div>
+    @else
     <div class="books" id='borrowedBooks'>
         <article class="mb-5 border-bottom">
         <h1>List of Books</h1>
@@ -24,5 +29,5 @@
 
         </article>
     @endforeach
-    
+    @endif
 @endsection

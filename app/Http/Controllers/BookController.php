@@ -13,8 +13,14 @@ class BookController extends Controller
      */
     public function index()
     {
-        $books = Book::all();
+        $books = Book::query()->filter(request(['search', 'category']))->get();
         return view('borrowedBooks', compact('books'));
+    }
+
+    public function indexHome()
+    {
+        $books = Book::all();
+        return view('homepage', ['books' => $books]);
     }
 
     /**
