@@ -205,7 +205,7 @@ nav .search-box .bx-search {
 
 .notification-bell {
     cursor: pointer;
-    margin-right: -120px;
+    margin-right: -120px
 }
 
 .notification-bell .fa-bell {
@@ -307,6 +307,16 @@ nav .search-box .bx-search {
 
 .button-icon {
     margin-right: 5px;
+}
+
+.borrow-button {
+    padding: 8px 12px;
+    margin: 5px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #3498db;
 }
 
 /* Responsive Media Query */

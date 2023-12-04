@@ -102,6 +102,16 @@ class DatabaseSeeder extends Seeder
             'image_path' => 'img/ChroniclesOfNarnia.jpeg'
         ]);        
         
+        Book::create([
+            'title' => "Harry Potter: The Chamber of Secrets",
+            'category_id' => 6,
+            'slug' => 'harry-potter-the-chamber-of-secrets',
+            'penulis' => 'J.K. Rowling',
+            'excerpt' => 'Harry Potter: The Chamber of Secrets menceritakan tahun kedua Harry di Hogwarts, di mana pesan ancaman mengenai "Kamar Rahasia" dan pembunuhan terhadap murid non-darah murni muncul. Bersama Ron dan Hermione, Harry menyelidiki serangkaian kejadian misterius di sekolah.',
+            'sinopsis' => 'Harry Potter: The Chamber of Secrets mengisahkan tahun kedua Harry Potter di Sekolah Sihir Hogwarts, ketika serangkaian pesan di dinding koridor sekolah memperingatkan bahwa "Kamar Rahasia" telah dibuka dan "pewaris Slytherin" akan membunuh semua murid yang tidak berasal dari keluarga penyihir berdarah murni. Ancaman ini ditemukan setelah serangan yang menyebabkan penghuni sekolah ketakutan. Sepanjang tahun, Harry dan sahabatnya, Ron dan Hermione, menyelidiki peristiwa tersebut.',
+            'image_path' => 'img/HarryPotter2.jpeg'
+        ]);        
+
         Category::create([
             'name' => 'Pemrograman',
             'slug' => 'pemrograman'

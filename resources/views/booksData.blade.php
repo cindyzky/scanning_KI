@@ -25,14 +25,17 @@
                     <a href="/BookDetails/{{ $book->slug }}">Read More...</a>
                     <form method="POST" action="{{ route('books.borrow', ['book' => $book->id]) }}">
                         @csrf
-                        <button type="submit">BORROW</button>
+                        <button type="submit" class="borrow-button">BORROW</button>
                     </form>
 
                 </div>
             </div>
         </div>
-
         </article>
     @endforeach
+    {{ $books->links() }}
     @endif
 @endsection
+
+
+
