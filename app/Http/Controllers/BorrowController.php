@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Borrow;
 use App\Models\Book;
-use App\Http\Requests\StoreBorrowRequest;
-use App\Http\Requests\UpdateBorrowRequest;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 
@@ -17,8 +15,7 @@ class BorrowController extends Controller
      */
     public function index()
     {
-        $borrows = Borrow::with('book')->get();
-        dd($borrows); 
+        $borrows = Borrow::all();
         return view('borrowedBooks', [
             'title' => 'Borrowed Books',
             'borrows' => $borrows
@@ -30,11 +27,13 @@ class BorrowController extends Controller
         $borrow = new Borrow();
         $borrow->user_id = auth()->user()->id;
         $borrow->book_id = $book->id;
-        $borrow->borrowed_at = Carbon::now();
+        $borrow->borrowed_at = now();
         $borrow->save();
 
         return redirect('/BorrowedBooks');
     }
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -55,10 +54,7 @@ class BorrowController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Borrow $borrow)
-    {
-        //
-    }
+
 
     /**
      * Show the form for editing the specified resource.

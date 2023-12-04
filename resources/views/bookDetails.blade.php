@@ -16,6 +16,13 @@
                     <p class="author">Author: {{ $bookDetail->penulis }}</p>
                     <p class="kategori"><a href="/Categories">Category :</a> <a href="/Categories/{{ $bookDetail->category->slug }}">{{ $bookDetail->category->name }}</a></p>
                     <p class="sinopsis">{{ $bookDetail->sinopsis }}</p>
+                    @if ($borrows->contains($bookDetail->id))
+                        <!-- Jika buku sedang dipinjam, tampilkan tombol 'Return' -->
+                        <a href="/return-book/{{ $bookDetail->id }}" class="return">Return</a>
+                    @else
+                        <!-- Jika buku belum dipinjam, tampilkan tombol 'Borrow' -->
+                        <a href="/borrow-book/{{ $bookDetail->id }}" class="borrow">Borrow</a>
+                    @endif
                 </div>
             </div>
             </article>

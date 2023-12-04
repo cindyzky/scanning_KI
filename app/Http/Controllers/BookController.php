@@ -8,6 +8,7 @@ use App\Models\Book;
 use App\Http\Requests\StoreBookRequest;
 use App\Http\Requests\UpdateBookRequest;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Auth;
 
 class BookController extends Controller
 {
@@ -69,21 +70,12 @@ class BookController extends Controller
      */
     public function show(Book $detail)
     {
+        $borrows = Auth::user()->borrows;
         return view('bookDetails', [
             "title" => "Details",
-            "bookDetail" => $detail
+            "bookDetail" => $detail,
+            "borrows" =>$borrows
         ]);
-    }
-
-    public function borrow(Request $request, Book $book)
-    {
-        $borrow = new Borrow();
-        $borrow->user_id = auth()->user()->id;
-        $borrow->book_id = $book->id;
-        $borrow->borrowed_at = Carbon::now();
-        $borrow->save();
-
-        return redirect('/BorrowedBooks')->with('newBorrow', $borrow);
     }
 
 

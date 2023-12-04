@@ -30,9 +30,10 @@ Route::post('/login', [LoginController::class, 'authenticate']);
 Route::get('/Dashboard', [DashboardController::class, 'index']);
 
 Route::get('/BooksData', [BookController::class, 'index']);
-Route::post('/books/{book}/borrow', [BorrowController::class, 'borrow'])->name('books.borrow');
 
 Route::get('/BorrowedBooks', [BorrowController::class, 'index']);
+Route::post('/books/{book}/borrow', [BorrowController::class, 'borrow'])->name('books.borrow');
+
 
 Route::get('/WaitingList', function () {
     return view('waitingList', [
@@ -58,11 +59,6 @@ Route::get('/History', function () {
     ]);
 });
 
-Route::get('/BorrowedBooks', function () {
-    return view('borrowedBooks', [
-        "title" => "Borrowed Books"
-    ]);
-});
 
 
 
