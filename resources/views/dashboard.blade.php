@@ -10,7 +10,7 @@
     <button class="dashboard-button borrow-book" onclick="window.location.href='/BooksData'">
     <span class="button-icon">📚</span> Borrow Book
     </button>
-    <button class="dashboard-button return-book" onclick="window.location.href='#'">
+    <button class="dashboard-button return-book" onclick="window.location.href='/BorrowedBooks'">
         <span class="button-icon">↩️</span> Return Book
     </button>
 

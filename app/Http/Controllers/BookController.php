@@ -14,7 +14,9 @@ class BookController extends Controller
     public function index()
     {
         $books = Book::query()->filter(request(['search', 'category']))->get();
-        return view('booksData', compact('books'));
+        return view('booksData', compact('books'), [
+            "title" => "Books Katalog"
+        ]);
     }
 
     public function indexHome()

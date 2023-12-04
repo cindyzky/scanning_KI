@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
-    <title>RuangBaca</title>
+    <title>RuangBaca | {{ $title }}</title>
     <link rel="stylesheet" href="{{ asset('css/mainStyle.css') }}" />
     <!-- Boxicons CDN Link -->
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
@@ -20,25 +20,25 @@
       </div>
       <ul class="nav-links">
         <li>
-          <a href="/Dashboard" class="active">
+          <a href="/Dashboard" class="{{ ($title === "Dashboard") ? 'active' : '' }}">
             <i class="bx bx-grid-alt"></i>
             <span class="links_name">Dashboard</span>
           </a>
         </li>
         <li>
-          <a href="/WaitingList">
+          <a href="/WaitingList" class="{{ ($title === "Waiting List") ? 'active' : '' }}">
             <i class="bx bx-box"></i>
             <span class="links_name">Waiting List</span>
           </a>
         </li>
         <li>
-          <a href="/BorrowedBooks">
+          <a href="/BorrowedBooks" class="{{ ($title === "Borrowed Books") ? 'active' : '' }}">
             <i class="bx bx-list-ul"></i>
             <span class="links_name">Borrowed Books</span>
           </a>
         </li>
         <li>
-          <a href="/History">
+          <a href="/History" class="{{ ($title === "Borrowing History") ? 'active' : '' }}">
             <i class="bx bx-pie-chart-alt-2"></i>
             <span class="links_name">Borrowing History</span>
           </a>

@@ -31,7 +31,9 @@ Route::get('/Dashboard', [DashboardController::class, 'index']);
 Route::get('/BooksData', [BookController::class, 'index']);
 
 Route::get('/WaitingList', function () {
-    return view('waitingList');
+    return view('waitingList', [
+        "title" => "Waiting List"
+    ]);
 });
 
 
@@ -47,11 +49,15 @@ Route::get('/Categories', [CategoryController::class, 'index']);
 // });
 
 Route::get('/History', function () {
-    return view('history');
+    return view('history', [
+        "title" => "Borrowing History"
+    ]);
 });
 
 Route::get('/BorrowedBooks', function () {
-    return view('borrowedBooks');
+    return view('borrowedBooks', [
+        "title" => "Borrowed Books"
+    ]);
 });
 
 
