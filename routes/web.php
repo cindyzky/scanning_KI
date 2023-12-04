@@ -4,6 +4,7 @@ use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\BorrowController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
@@ -29,6 +30,9 @@ Route::post('/login', [LoginController::class, 'authenticate']);
 Route::get('/Dashboard', [DashboardController::class, 'index']);
 
 Route::get('/BooksData', [BookController::class, 'index']);
+Route::post('/books/{book}/borrow', [BorrowController::class, 'borrow'])->name('books.borrow');
+
+Route::get('/BorrowedBooks', [BorrowController::class, 'index']);
 
 Route::get('/WaitingList', function () {
     return view('waitingList', [

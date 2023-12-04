@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
+use App\Models\Borrow;
 use App\Models\Book;
 use App\Http\Requests\StoreBookRequest;
 use App\Http\Requests\UpdateBookRequest;
+use Carbon\Carbon;
 
 class BookController extends Controller
 {
@@ -71,6 +74,18 @@ class BookController extends Controller
             "bookDetail" => $detail
         ]);
     }
+
+    public function borrow(Request $request, Book $book)
+    {
+        $borrow = new Borrow();
+        $borrow->user_id = auth()->user()->id;
+        $borrow->book_id = $book->id;
+        $borrow->borrowed_at = Carbon::now();
+        $borrow->save();
+
+        return redirect('/BorrowedBooks')->with('newBorrow', $borrow);
+    }
+
 
     /**
      * Show the form for editing the specified resource.

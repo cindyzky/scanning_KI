@@ -23,6 +23,11 @@
                     <p class="author">Author: {{ $book->penulis }}</p>
                     <p class="excerpt">{{ $book->excerpt }}</p>
                     <a href="/BookDetails/{{ $book->slug }}">Read More...</a>
+                    <form method="POST" action="{{ route('books.borrow', ['book' => $book->id]) }}">
+                        @csrf
+                        <button type="submit">BORROW</button>
+                    </form>
+
                 </div>
             </div>
         </div>
