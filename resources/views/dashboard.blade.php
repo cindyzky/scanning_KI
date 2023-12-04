@@ -7,4 +7,12 @@
 
 @section('content')
     <h1>Welcome, {{ auth()->user()->name }}!</h1>
+    <button class="dashboard-button borrow-book" onclick="window.location.href='/BooksData'">
+    <span class="button-icon">📚</span> Borrow Book
+    </button>
+    <button class="dashboard-button return-book" onclick="window.location.href='#'">
+        <span class="button-icon">↩️</span> Return Book
+    </button>
+
+
 @endsection

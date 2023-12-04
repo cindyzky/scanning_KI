@@ -51,7 +51,6 @@
       </div> -->
 
       <!-- SLIDE -->
-      
       <div class="slide">
         <div class="slider-container">
           <div class="slider-content">

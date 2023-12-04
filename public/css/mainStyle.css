@@ -289,6 +289,24 @@ nav .search-box .bx-search {
     background-color: #2980b9;
 }
 
+.dashboard-button {
+    padding: 8px 12px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #3498db;
+}
+
+.dashboard-button:hover {
+    background-color: #000;
+}
+
+.button-icon {
+    margin-right: 5px;
+}
+
 /* Responsive Media Query */
 @media (max-width: 1240px) {
     .sidebar {

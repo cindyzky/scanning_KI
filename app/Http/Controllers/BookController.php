@@ -14,7 +14,7 @@ class BookController extends Controller
     public function index()
     {
         $books = Book::query()->filter(request(['search', 'category']))->get();
-        return view('borrowedBooks', compact('books'));
+        return view('booksData', compact('books'));
     }
 
     public function indexHome()
@@ -56,7 +56,7 @@ class BookController extends Controller
         $book->image_path = $imageName;
         $book->save();
 
-        return redirect('/borrowedBooks')->with('success', 'Book created successfully.');
+        return redirect('/BooksData')->with('success', 'Book created successfully.');
     }
 
     /**

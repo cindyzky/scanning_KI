@@ -28,11 +28,13 @@ Route::post('/login', [LoginController::class, 'authenticate']);
 
 Route::get('/Dashboard', [DashboardController::class, 'index']);
 
+Route::get('/BooksData', [BookController::class, 'index']);
+
 Route::get('/WaitingList', function () {
     return view('waitingList');
 });
 
-Route::get('/BorrowedBooks', [BookController::class, 'index']);
+
 Route::get('/BookDetails/{detail:slug}', [BookController::class, 'show']);
 Route::get('/Categories/{category:slug}', [CategoryController::class, 'show']);
 
@@ -46,6 +48,10 @@ Route::get('/Categories', [CategoryController::class, 'index']);
 
 Route::get('/History', function () {
     return view('history');
+});
+
+Route::get('/BorrowedBooks', function () {
+    return view('borrowedBooks');
 });
 
 

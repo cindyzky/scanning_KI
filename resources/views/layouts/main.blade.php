@@ -57,7 +57,7 @@
         <div class="sidebar-button">
           @yield('sidebar-button')
         </div>
-        <form action="/BorrowedBooks" class="search">
+        <form action="/BooksData" class="search">
           <div class="search-box">
             <input type="text" placeholder="Cari Judul Buku, Penulis" name="search" value="{{ request('search') }}"/>
             <i class="bx bx-search"></i>
