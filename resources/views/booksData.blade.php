@@ -6,6 +6,12 @@
 @endsection
 
 @section('content')
+@if(session()->has('borrowError'))
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    {{ session('borrowError') }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+@endif
     @if($books->isEmpty())
         <div class="not-found">
             <h1>Book not found!!! Please try another keyword</h1>
@@ -21,6 +27,7 @@
                 <div class="book-info">
                     <h3><a href="/BookDetails/{{ $book->slug }}">{{ $book->title }}</a></h3>
                     <p class="author">Author: {{ $book->penulis }}</p>
+                    <p class="jumlah_tersedia">Available Books: {{ $book->jumlah_tersedia }} books</p>
                     <p class="excerpt">{{ $book->excerpt }}</p>
                     <a href="/BookDetails/{{ $book->slug }}">Read More...</a>
                     <form method="POST" action="{{ route('books.borrow', ['book' => $book->id]) }}">

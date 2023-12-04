@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('slug')->unique();
             $table->string('penulis');
+            $table->unsignedBigInteger('jumlah_tersedia');
             $table->text('excerpt');
             $table->text('sinopsis');
             $table->string('image_path');

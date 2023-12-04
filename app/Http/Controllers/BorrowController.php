@@ -24,13 +24,21 @@ class BorrowController extends Controller
 
     public function borrow(Request $request, Book $book)
     {
-        $borrow = new Borrow();
-        $borrow->user_id = auth()->user()->id;
-        $borrow->book_id = $book->id;
-        $borrow->borrowed_at = now();
-        $borrow->save();
+        if($book->jumlah_tersedia > 0){
+            $borrow = new Borrow();
+            $borrow->user_id = auth()->user()->id;
+            $borrow->book_id = $book->id;
+            $borrow->borrowed_at = now();
+            $borrow->save();
 
-        return redirect('/BorrowedBooks');
+            $book->jumlah_tersedia--;
+            $book->save();
+
+            return redirect('/BorrowedBooks')->with('success', "You have successfully borrow {$book->title}"); 
+        }
+         
+
+        return back()->with('borrowError', "Borrow Failed! The book {$book->title} are not available right now!");
     }
 
 

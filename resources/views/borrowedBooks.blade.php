@@ -6,6 +6,13 @@
 @endsection
 
 @section('content')
+@if(session()->has('success'))
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+    {{ session('success') }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+@endif
+
     @if($borrows->isEmpty())
         <div class="not-found">
             <h1>You haven't borrow any book</h1>
