@@ -76,7 +76,7 @@
     background: #f5f5f5;
     min-height: 200vh;
     width: calc(100% - 220px);
-    left: 240px;
+    left: 220px;
     transition: all 0.5s ease;
 }
 .sidebar.active ~ .home-section {
@@ -205,6 +205,7 @@ nav .search-box .bx-search {
 
 .notification-bell {
     cursor: pointer;
+    margin-right: -120px;
 }
 
 .notification-bell .fa-bell {
