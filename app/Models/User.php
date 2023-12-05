@@ -49,14 +49,8 @@ class User extends Authenticatable
         return $this->hasMany(Borrow::class);
     }
 
-<<<<<<< HEAD
-    public function return()
-    {
-      return $this->hasMany(History::class);
-=======
     public function waitingList()
     {
         return $this->hasMany(WaitingList::class);
->>>>>>> 7519d5ea88c83c9ff9716669527b877fbf2a1b48
     }
 }
