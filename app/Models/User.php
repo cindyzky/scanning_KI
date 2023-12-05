@@ -49,13 +49,12 @@ class User extends Authenticatable
         return $this->hasMany(Borrow::class);
     }
 
-<<<<<<< HEAD
-=======
+
     public function return()
     {
       return $this->hasMany(History::class);
     }
->>>>>>> 2d880d3781173a458f5d4cfd11ac4cc6baff0a83
+
     public function waitingList()
     {
         return $this->hasMany(WaitingList::class);
