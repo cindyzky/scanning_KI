@@ -37,12 +37,16 @@ class Book extends Model
       return $this->hasMany(Borrow::class);
     }
 
+
+    public function waitingList()
+    {
+      return $this->hasMany(WaitingList::class);
+    }
+
     public function return()
     {
       return $this->hasMany(History::class);
-  }
-  public function waitingList()
-  {
-    return $this->hasMany(WaitingList::class);
-  }
+     }
+
+
 }
