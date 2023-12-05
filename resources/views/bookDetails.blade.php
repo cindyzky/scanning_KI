@@ -31,13 +31,13 @@
                                     @csrf
                                     <button type="submit" class="borrow-button">BORROW</button>
                                 </form>
-                                <form method="POST" action="{{ route('books.return', ['borrow' => $bookDetail->id]) }}">
+                                <form method="POST" action="{{ route('books.return', ['borrow' => $borrowIds->first()]) }}">
                                     @csrf
                                     <button type="submit" class="borrow-button">RETURN</button>
                                 </form>
                         </div>
                         @else
-                            <form method="POST" action="{{ route('books.return', ['borrow' => $bookDetail->id]) }}">
+                            <form method="POST" action="{{ route('books.return', ['borrow' => $borrowIds->first()]) }}">
                                 @csrf
                                 <button type="submit" class="borrow-button">RETURN</button>
                             </form>
