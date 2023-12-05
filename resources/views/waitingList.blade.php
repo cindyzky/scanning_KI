@@ -30,7 +30,10 @@
                 <p class="author">Author: {{ $waitingList->book->penulis }}</p>
                 <p class="excerpt">{{ $waitingList->book->excerpt }}</p>
                 <a href="/BookDetails/{{ $waitingList->book->slug }}">Read More...</a>
-
+                <form method="POST" action="{{ route('books.removeWaitlist', ['id' => $waitingList->id]) }}">
+                    @csrf
+                    <button type="submit" class="waiting-list-button">REMOVE WAITING LIST</button>
+                </form>
             </div>
         </div>
     </div>

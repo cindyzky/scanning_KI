@@ -1,0 +1,63 @@
+.emp-profile {
+    border-radius: 0.5rem;
+    background: #fff;
+    justify-content: center;
+    min-height: 20vh;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-bottom: 5%;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 35%;
+}
+
+.profile-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.profile-head {
+    margin-bottom: 10px;
+}
+
+.profile-img .file {
+    position: relative;
+    overflow: hidden;
+    margin-top: -20%;
+    width: auto;
+    border: none;
+    border-radius: 0;
+    font-size: 15px;
+    background: #212529b8;
+    padding: 5px 10px;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.profile-img .file input {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: auto;
+}
+
+.profile-edit-btn {
+    border: none;
+    border-radius: 1.5rem;
+    width: 90%;
+    padding: 2%;
+    font-weight: 600;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 10px;
+}

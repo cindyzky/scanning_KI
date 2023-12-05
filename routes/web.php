@@ -37,11 +37,11 @@ Route::get('/BorrowedBooks', [BorrowController::class, 'index']);
 Route::post('/books/{book}/borrow', [BorrowController::class, 'borrow'])->name('books.borrow');
 
 
-// Route::get('/WaitingList', function () {
-//     return view('waitingList', [
-//         "title" => "Waiting List"
-//     ]);
-// });
+Route::get('/Profile', function () {
+    return view('profile', [
+        "title" => "Your Profile"
+    ]);
+});
 Route::get('/WaitingList', [WaitingListController::class, 'index']);
 Route::post('/books/{book}/WaitingList', [WaitingListController::class, 'waitList'])->name('books.waitlist');
 
@@ -53,3 +53,4 @@ Route::get('/Categories', [CategoryController::class, 'index']);
 Route::post('/books/return/{borrow}', [HistoryController::class, 'return'])->name('books.return');
 Route::get('/History', [HistoryController::class, 'index']);
 
+Route::post('/books/removeWaitlist/{id}', [WaitingListController::class, 'removeWaitlist'])->name('books.removeWaitlist');

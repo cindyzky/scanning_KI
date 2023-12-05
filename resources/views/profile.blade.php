@@ -2,12 +2,11 @@
 
 @section('sidebar-button')
           <i class="bx bx-menu sidebarBtn"></i>
-          <span class="dashboard">Dashboard</span>
+          <span class="dashboard">Your Profile</span>
 @endsection
 
 @section('content')
-    <h1 class="mb-4">Welcome, {{ auth()->user()->name }}!</h1>
-    <div class="container">
+<div class="container">
     <div class="row justify-content-center">
 
             <div class="emp-profile">
@@ -15,7 +14,11 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-img">
-                            <img src="img/Profile2.jpeg" alt=""/>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
+                            <div class="file btn btn-lg btn-primary">
+                                Change Photo
+                                <input type="file" name="file"/>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -40,12 +43,5 @@
 
     </div>     
 </div>
-    <button class="dashboard-button borrow-book" onclick="window.location.href='/BooksData'">
-    <span class="button-icon">📚</span> Borrow Book
-    </button>
-    <button class="dashboard-button return-book" onclick="window.location.href='/BorrowedBooks'">
-        <span class="button-icon">↩️</span> Return Book
-    </button>
-
 
 @endsection

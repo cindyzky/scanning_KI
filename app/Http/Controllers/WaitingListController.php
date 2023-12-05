@@ -36,6 +36,18 @@ class WaitingListController extends Controller
          
     }
 
+    public function removeWaitlist($id)
+    {
+        try {
+            $waitingList = WaitingList::findOrFail($id);
+            $waitingList->delete();
+
+            return redirect()->back()->with('success', 'Waiting list entry removed successfully!');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Failed to remove waiting list entry.');
+        }
+    }
+
 
     /**
      * Show the form for creating a new resource.
