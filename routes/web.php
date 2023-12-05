@@ -9,6 +9,7 @@ use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\WaitingListController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -41,7 +42,7 @@ Route::get('/WaitingList', function () {
         "title" => "Waiting List"
     ]);
 });
-
+Route::post('/books/{book}/WaitingList', [WaitingListController::class, 'waitList'])->name('books.waitlist');
 
 Route::get('/BookDetails/{detail:slug}', [BookController::class, 'show']);
 Route::get('/Categories/{category:slug}', [CategoryController::class, 'show']);

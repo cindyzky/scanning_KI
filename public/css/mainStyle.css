@@ -332,6 +332,16 @@ nav .search-box .bx-search {
     margin-right: 10px;
 }
 
+.waiting-list-button {
+    padding: 8px 12px;
+    margin: 5px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #3498db;
+}
+
 /* Responsive Media Query */
 @media (max-width: 1240px) {
     .sidebar {
