@@ -13,9 +13,9 @@
         </div>
     @endif
 
-    @if($waitingList->isEmpty())
+    @if($waitList->isEmpty())
     <div class="not-found">
-        <h1>You haven't added any books to the waitlist</h1>
+        <h1>You haven't added any books to the Waiting List</h1>
     </div>
     @else
     <div class="books" id='waitingList'>

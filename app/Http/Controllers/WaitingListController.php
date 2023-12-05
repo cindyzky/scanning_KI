@@ -17,7 +17,7 @@ class WaitingListController extends Controller
         $waitList = WaitingList::all();
         return view('waitingList', [
             'title' => 'Waiting List',
-            'waitlist' => $waitList
+            'waitList' => $waitList
         ]);
     }
 
