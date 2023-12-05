@@ -36,4 +36,9 @@ class Book extends Model
     {
       return $this->hasMany(Borrow::class);
     }
+
+    public function waitingList()
+    {
+      return $this->hasMany(WaitingList::class);
+    }
 }
