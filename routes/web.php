@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BorrowController;
+use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
@@ -46,20 +47,7 @@ Route::get('/BookDetails/{detail:slug}', [BookController::class, 'show']);
 Route::get('/Categories/{category:slug}', [CategoryController::class, 'show']);
 
 Route::get('/Categories', [CategoryController::class, 'index']);
-// Route::get('/Categories', function () {
-//     return view('categories', [
-//         'title' => 'All Categories',
-//         'categories' => Category::all()
-//     ]);
-// });
 
-Route::get('/History', function () {
-    return view('history', [
-        "title" => "Borrowing History"
-    ]);
-});
-
-
-
-
+Route::post('/books/return/{borrow}', [HistoryController::class, 'return'])->name('books.return');
+Route::get('/History', [HistoryController::class, 'index']);
 

@@ -70,7 +70,7 @@ class BookController extends Controller
      */
     public function show(Book $detail)
     {
-        $borrows = Auth::user()->borrows;
+        $borrows = Auth::user()->borrows()->pluck('book_id');
         return view('bookDetails', [
             "title" => "Details",
             "bookDetail" => $detail,

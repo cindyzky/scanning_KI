@@ -36,4 +36,9 @@ class Book extends Model
     {
       return $this->hasMany(Borrow::class);
     }
+
+    public function return()
+    {
+      return $this->hasMany(History::class);
+    }
 }
