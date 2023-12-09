@@ -15,7 +15,7 @@ class BorrowController extends Controller
      */
     public function index()
     {
-        $borrows = Borrow::all();
+        $borrows = Borrow::orderBy('borrowed_at', 'desc')->get();
         return view('borrowedBooks', [
             'title' => 'Borrowed Books',
             'borrows' => $borrows

@@ -17,7 +17,7 @@ class HistoryController extends Controller
      */
     public function index()
     {
-        $histories = History::all();
+        $histories = History::orderBy('borrowed_at', 'desc')->get();
         return view('history', [
             'title' => 'Borrowing History',
             'histories' => $histories
@@ -35,6 +35,7 @@ class HistoryController extends Controller
         $histories = new History();
         $histories->user_id = auth()->user()->id;
         $histories->book_id = $book->id;
+        $histories->borrowed_at = $borrow->borrowed_at;
         $histories->returned_at = now();
         $histories->save();
         

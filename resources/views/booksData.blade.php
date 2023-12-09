@@ -47,7 +47,7 @@
         @endforeach
         </article>
         
-    {{ $books->links() }}
+        {{ $books->links() }}
     @endif
 @endsection
 

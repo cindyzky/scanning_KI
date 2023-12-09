@@ -19,6 +19,7 @@
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
+  
   <body>
     <div class="sidebar">
       <div class="logo-details">
@@ -74,8 +75,12 @@
         </div>
         <div class="profile-details dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img class="ellipse" src="{{ asset('img/profile.jpeg') }}" alt="" />
-            <span class="admin_name">{{ auth()->user()->name }}</span>
+              @if(auth()->user()->profile_picture)
+                  <img class="ellipse" src="{{ asset('storage/profile_pictures/' . auth()->user()->profile_picture) }}" alt="Profile Picture"/>
+              @else
+                  <img class="ellipse" src="{{ asset('img/Profile2.jpeg') }}" alt="Profile Picture"/>
+              @endif
+            <span class="admin_name">{{ auth()->user()->username }}</span>
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="/Profile">Profile</a></li>

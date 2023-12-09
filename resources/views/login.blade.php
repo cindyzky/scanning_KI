@@ -29,7 +29,7 @@
                 <label for="">Password</label>
                 <input type="password" placeholder="PASSWORD*"name="password" id="password" required>
                 <p>
-                    <a href="#">Forgot Password?</a>
+                    <a href="/ResetPassword">Forgot Password?</a>
                 </p>
                 <p>
                     Don't have an account? <a href="/register">Register</a>

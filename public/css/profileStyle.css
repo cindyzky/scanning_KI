@@ -5,6 +5,20 @@
     min-height: 20vh;
     padding-top: 5%;
     padding-bottom: 5%;
+    margin-bottom: 5%;
+}
+
+.section-container {
+    display: flex;
+    border-radius: 0.5rem;
+    background: #f5f5f5;
+    justify-content: center;
+    min-height: 20vh;
+    width: 70%;
+    margin: 0 auto 5%;
+    flex-direction: column; /* Mengatur tata letak elemen secara vertikal */
+    align-items: center;
+    padding: 20px;
 }
 
 .profile-img {
@@ -25,31 +39,9 @@
     margin-bottom: 10px;
 }
 
-.profile-img .file {
-    position: relative;
-    overflow: hidden;
-    margin-top: -20%;
-    width: auto;
-    border: none;
-    border-radius: 0;
-    font-size: 15px;
-    background: #212529b8;
-    padding: 5px 10px;
-    overflow: visible;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.profile-img .file input {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 50%;
-    height: auto;
-}
-
 .profile-edit-btn {
+    display: block;
+    text-align: center;
     border: none;
     border-radius: 1.5rem;
     width: 90%;
@@ -59,4 +51,39 @@
     color: #fff;
     cursor: pointer;
     margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.profile-edit-btn:hover {
+    background-color: #060708;
+    text-decoration: none;
+    color: #fff;
+}
+
+.section-container h4 {
+    margin-bottom: 20px;
+}
+
+.change-profile {
+    margin-bottom: 1%;
+}
+
+.change-btn {
+    border: none;
+    border-radius: 1.5rem;
+    width: 20%;
+    padding: 1%;
+    font-weight: 600;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.change-btn:hover {
+    background-color: #060708;
+    text-decoration: none;
+    color: #fff;
 }

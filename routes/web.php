@@ -6,10 +6,12 @@ use App\Http\Controllers\BookController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BorrowController;
 use App\Http\Controllers\HistoryController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\WaitingListController;
+use App\Http\Controllers\ForgotPasswordController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,6 +31,9 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login', [LoginController::class, 'authenticate']);
 
+Route::get('/ResetPassword', [ForgotPasswordController::class, 'index']);
+Route::post('/ResetPassword', [ForgotPasswordController::class, 'reset']);
+
 Route::get('/Dashboard', [DashboardController::class, 'index']);
 
 Route::get('/BooksData', [BookController::class, 'index']);
@@ -36,12 +41,13 @@ Route::get('/BooksData', [BookController::class, 'index']);
 Route::get('/BorrowedBooks', [BorrowController::class, 'index']);
 Route::post('/books/{book}/borrow', [BorrowController::class, 'borrow'])->name('books.borrow');
 
+Route::get('/Profile', [ProfileController::class, 'index']);
 
-Route::get('/Profile', function () {
-    return view('profile', [
-        "title" => "Your Profile"
-    ]);
+Route::middleware('auth')->group(function () {
+    Route::post('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
+    Route::post('/password/update', [ProfileController::class, 'updatePassword'])->name('password.update');
 });
+
 Route::get('/WaitingList', [WaitingListController::class, 'index']);
 Route::post('/books/{book}/WaitingList', [WaitingListController::class, 'waitList'])->name('books.waitlist');
 

@@ -22,7 +22,9 @@
                     <h3><a href="/BookDetails/{{ $history->book->slug }}">{{ $history->book->title }}</a></h3>
                     <p class="author">Author: {{ $history->book->penulis }}</p>
                     <p class="excerpt">{{ $history->book->excerpt }}</p>
-                    <a href="/BookDetails/{{ $history->book->slug }}">Read More...</a>
+                    <a href="/BookDetails/{{ $history->book->slug }}">Read More...</a><br><br>
+                    <p class="history borrowed_at">Borrowed At : {{ $history->borrowed_at }}</p>
+                    <p class="history returned_at">Returned At : {{ $history->returned_at }}</p>
                 </div>
             </div>
         </div>

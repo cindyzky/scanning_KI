@@ -5,9 +5,9 @@
                 @csrf
                 <h2>Registration</h2>
                 <hr>
-                <label for="">Name</label>
-                <input class="form-control @error('name') is-invalid @enderror" type="text" placeholder="NAME*" name="name" id="name" value="{{ old('name') }}">
-                @error('name')
+                <label for="">Username</label>
+                <input class="form-control @error('username') is-invalid @enderror" type="text" placeholder="USERNAME*" name="username" id="username" value="{{ old('username') }}">
+                @error('username')
                 <div class="invalid-feedback">
                     {{ $message }}
                 </div>

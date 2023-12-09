@@ -291,17 +291,39 @@ nav .search-box .bx-search {
 }
 
 .dashboard-button {
+    display: flex;
+    gap: 40%;
+    margin-top: 3%;
+    margin-left: 20%;
+}
+
+.borrow-book {
     padding: 8px 12px;
     margin: 5px;
     border: none;
-    border-radius: 5px;
+    border-radius: 12px;
     cursor: pointer;
     color: #fff;
     background-color: #3498db;
 }
-
-.dashboard-button:hover {
+.borrow-book:hover {
     background-color: #000;
+    text-decoration: none;
+    color: #fff;
+}
+.return-book {
+    padding: 8px 12px;
+    margin: 5px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #3498db;
+}
+.return-book:hover {
+    background-color: #000;
+    text-decoration: none;
+    color: #fff;
 }
 
 .button-icon {
@@ -386,6 +408,29 @@ nav .search-box .bx-search {
         width: calc(100% / 2 - 15px);
         margin-bottom: 15px;
     }
+
+    .home-section nav .search-box {
+        max-width: 300px;
+        margin: 0 10px;
+    }
+
+    .home-section .search-box input {
+        font-size: 16px;
+    }
+
+    nav .search-box .bx-search {
+        height: 30px;
+        width: 30px;
+        font-size: 18px;
+    }
+
+    .notification-bell {
+        margin-right: 5px;
+    }
+
+    .dashboard-button {
+        gap: 20%;
+    }
 }
 @media (max-width: 700px) {
     nav .sidebar-button .dashboard,
@@ -408,6 +453,26 @@ nav .search-box .bx-search {
     }
     .sidebar.active ~ .home-section nav .profile-details {
         display: none;
+    }
+    .home-section nav .search-box {
+        max-width: 230px;
+        margin: 0 10px;
+    }
+
+    .home-section .search-box input {
+        font-size: 14px;
+    }
+
+    nav .search-box .bx-search {
+        height: 30px;
+        width: 30px;
+        font-size: 18px;
+    }
+
+    .dashboard-button {
+        gap: 20%;
+        margin-top: 3%;
+        margin-left: 10%;
     }
 }
 @media (max-width: 400px) {
