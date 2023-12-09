@@ -37,29 +37,27 @@
                                 </form>
                         </div>
                         @else
+                        <div class="button-group">
                             <form method="POST" action="{{ route('books.return', ['borrow' => $borrowIds->first()]) }}">
                                 @csrf
                                 <button type="submit" class="borrow-button">RETURN</button>
                             </form>
-                            <!-- WAITING LIST MASIH DIBUAT -->
-                            <form method="POST" action="{{ route('books.return', ['borrow' => $bookDetail->id]) }}">
+                            <form method="POST" action="{{ route('books.waitlist', ['book' => $bookDetail->id]) }}">
                                 @csrf
-                                <button type="submit" class="borrow-button">WAITING LIST</button>
+                                <button type="submit" class="waiting-list-button">ADD WAITING LIST</button>
                             </form>
+                        </div>
                         @endif
                     @else
                         @if ($bookDetail->jumlah_tersedia > 0)
-                            <!-- Jika buku belum dipinjam dan jumlah tersedia > 0, tampilkan tombol 'Borrow' -->
                             <form method="POST" action="{{ route('books.borrow', ['book' => $bookDetail->id]) }}">
                                 @csrf
                                 <button type="submit" class="borrow-button">BORROW</button>
                             </form>
                         @else
-                        <!-- WAITING LIST MASIH DIBUAT -->
-                            <!-- Jika buku belum dipinjam dan jumlah tersedia = 0, tampilkan tombol 'Waiting List' -->
-                            <form method="POST" action="{{ route('books.return', ['borrow' => $bookDetail->id]) }}">
+                            <form method="POST" action="{{ route('books.waitlist', ['book' => $bookDetail->id]) }}">
                                 @csrf
-                                <button type="submit" class="borrow-button">WAITING LIST</button>
+                                <button type="submit" class="waiting-list-button">ADD WAITING LIST</button>
                             </form>
                         @endif
                     @endif
