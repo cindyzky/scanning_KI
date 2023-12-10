@@ -30,6 +30,9 @@
         </div>
         </article>
     @endforeach
+    <div class="pagination">
+            {{ $histories->links() }}
+    </div>
     @endif
 
 @endsection

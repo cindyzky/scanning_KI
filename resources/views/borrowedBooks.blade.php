@@ -39,6 +39,10 @@
         </div>
         </article>
     @endforeach
+
+    <div class="pagination">
+            {{ $borrows->links() }}
+    </div>
     @endif
 
 @endsection

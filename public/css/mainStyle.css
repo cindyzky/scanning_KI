@@ -363,6 +363,13 @@ nav .search-box .bx-search {
     background-color: #3498db;
 }
 
+.pagination {
+    position: fixed;
+    bottom: 0;
+    left: 55%;
+    width: 100%;
+}
+
 /* Responsive Media Query */
 @media (max-width: 1240px) {
     .sidebar {
@@ -431,6 +438,10 @@ nav .search-box .bx-search {
     .dashboard-button {
         gap: 20%;
     }
+
+    .pagination {
+        left: 80%;
+    }
 }
 @media (max-width: 700px) {
     nav .sidebar-button .dashboard,
@@ -474,7 +485,11 @@ nav .search-box .bx-search {
         margin-top: 3%;
         margin-left: 10%;
     }
+    .pagination {
+        left: 25%;
+    }
 }
+
 @media (max-width: 400px) {
     .sidebar {
         width: 0;

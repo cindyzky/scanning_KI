@@ -47,7 +47,9 @@
         @endforeach
         </article>
         
-        {{ $books->links() }}
+        <div class="pagination">
+            {{ $books->links() }}
+        </div>
     @endif
 @endsection
 

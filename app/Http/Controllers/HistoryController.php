@@ -17,7 +17,7 @@ class HistoryController extends Controller
      */
     public function index()
     {
-        $histories = History::orderBy('borrowed_at', 'desc')->get();
+        $histories = History::orderBy('returned_at', 'desc')->paginate(5);
         return view('history', [
             'title' => 'Borrowing History',
             'histories' => $histories
