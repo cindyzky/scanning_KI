@@ -20,13 +20,12 @@
           <a href="/login" class="button-login">LOGIN</a>
       </div>
           
-
       <!-- Logo Ruang Baca-->
         <img class="logoruangbaca" src="img/LogoRuangBaca.png" />
 
       <!-- Search bar -->
         <div class="search-container">
-          <form onsubmit="searchFunction(event)">
+          <form action="/login" class="search">
               <input
                 class="search-input"
                 type="text"
@@ -38,17 +37,6 @@
               </button>
           </form>
         </div>
-
-      <!-- SLIDE -->
-      <!-- <div class="slide-nya">
-            <img class="slide1" src="img/SoloLeveling.jpeg" />
-            <img class="slide2" src="img/LaskasPelangi.jpeg" />
-            <img class="slide3" src="img/JavaProgramming.jpeg" />
-            <img class="slide4" src="img/PythonProgramming.jpeg" />
-            <img class="slide5" src="img/OmniscientReadersViewpoint.jpeg"/>
-            <div class="text-wrapper-3">&lt;</div>
-            <div class="text-wrapper-4">&lt;</div>
-      </div> -->
 
       <!-- SLIDE -->
       <div class="slide">
@@ -68,7 +56,7 @@
 
       <!-- Read More -->
       <div class="overlap-group">
-        <button class="button-read-more">Read More</button>
+        <a href="/login" class="button-read-more">Read More</a>
       </div>
     </div>
     <script>
