@@ -78,7 +78,7 @@
               @if(auth()->user()->profile_picture)
                   <img class="ellipse" src="{{ asset('storage/profile_pictures/' . auth()->user()->profile_picture) }}" alt="Profile Picture"/>
               @else
-                  <img class="ellipse" src="{{ asset('img/Profile2.jpeg') }}" alt="Profile Picture"/>
+                  <img class="ellipse" src="{{ asset('img/Profile3.jpeg') }}" alt="Profile Picture"/>
               @endif
             <span class="admin_name">{{ auth()->user()->username }}</span>
           </a>
