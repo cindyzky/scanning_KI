@@ -228,6 +228,10 @@ body {
         width: 400px;
         font-size: 18px;
     }
+
+    .slide-btn {
+        top: 85%;
+    }
 }
 
 @media (max-width: 550px) {
@@ -239,5 +243,16 @@ body {
     .search-input {
         width: 200px;
         font-size: 16px;
+    }
+    .slide-btn {
+        top: 75%;
+    }
+
+    .prev-btn {
+        left: 20px;
+    }
+
+    .next-btn {
+        right: 20px;
     }
 }
