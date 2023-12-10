@@ -23,7 +23,8 @@
   <body>
     <div class="sidebar">
       <div class="logo-details">
-      <img class="logo-RB" src="{{ asset('img/LogoRuangBaca.png') }}" />
+      <a href="/Dashboard">
+      <img class="logo-RB" src="{{ asset('img/LogoRuangBaca.png') }}" /></a>
       </div>
       <ul class="nav-links">
         <li>
