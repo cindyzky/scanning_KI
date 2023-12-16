@@ -21,7 +21,7 @@
                 <div class="book-info">
                     <h2>{{ $bookDetail->title }}</h2>
                     <p class="author">Author: {{ $bookDetail->penulis }}</p>
-                    <p class="kategori"><a href="/Categories">Category :</a> <a href="/Categories/{{ $bookDetail->category->slug }}">{{ $bookDetail->category->name }}</a></p>
+                    <p class="kategori"><a href="/Categories" class="category-link">Category :</a> <a href="/Categories/{{ $bookDetail->category->slug }}" class="category-link">{{ $bookDetail->category->name }}</a></p>
                     <p class="jumlah_tersedia">Available Books: {{ $bookDetail->jumlah_tersedia }} books</p>
                     <p class="sinopsis">{{ $bookDetail->sinopsis }}</p>
                     @if ($borrows->contains($bookDetail->id))

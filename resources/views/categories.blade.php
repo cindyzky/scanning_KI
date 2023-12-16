@@ -8,14 +8,17 @@
 @section('content')
     <div class="books" id='borrowedBooks'>
         <h1>Book Categories</h1>
-        @foreach($categories as $category)
         <div class="book-item">
+        @foreach($categories as $category)
+        
             <ul>
                 <li>
                 <h3><a href="/Categories/{{ $category->slug }}" class="text-decoration-none">{{ $category->name }}</a></h3>
                 </li>
             </ul>
-        </div>
-    @endforeach
 
+    @endforeach
+            </div>
+
+    <a href="/BooksData" class="back">Back To List of Books</a>
 @endsection

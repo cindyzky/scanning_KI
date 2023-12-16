@@ -22,4 +22,5 @@
         </div>
     @endforeach
     </article>
+    <a href="/BooksData" class="back">Back To List of Books</a>
 @endsection
