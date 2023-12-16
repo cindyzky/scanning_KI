@@ -239,6 +239,106 @@ class DatabaseSeeder extends Seeder
             'sinopsis' => 'Stella Grant mengendalikan hidupnya dengan ketat, menjauhkan diri dari segala yang dapat mengancam transplantasi paru-parunya yang rapuh. Namun, Will Newman, seorang pemuda yang ingin keluar dari belenggu rumah sakit, muncul dalam hidupnya. Stella harus menjaga jarak enam kaki agar tidak mengancam transplantasinya, tapi apakah itu juga mengancam hatinya? Di antara aturan ketat dan kenyataan, mereka berdua harus mencuri kembali ruang yang telah dicuri oleh penyakit mereka. Jarak lima kaki bukan lagi ancaman jika itu berarti menghentikan patah hati. Dalam pertarungan melawan penyakit dan cinta yang melampaui batas fisik, keduanya menemukan makna sejati dari hidup dan keberanian untuk mencintai tanpa menyentuh.',
             'image_path' => 'img/FiveFeetApart.jpg'
         ]);
+
+        Book::create([
+            'title' => 'Jujutsu Kaisen',
+            'category_id' => 5,
+            'slug' => 'jujutsu-kaisen',
+            'penulis' => 'Gege Akutami',
+            'jumlah_tersedia' => 5,
+            'excerpt' => 'Yuji Itadori, seorang siswa SMA, secara tak sengaja terlibat dalam dunia gelap makhluk kutukan setelah menemukan artefak berbahaya. Dengan menyatu dengan artefak itu, dia memasuki dunia Jujutsu dan belajar mengendalikan kekuatan gelap yang mengancam manusia.',
+            'sinopsis' => 'Yuji Itadori, seorang siswa SMA, tak sengaja menemukan artefak berbahaya yang terkait dengan dunia gelap makhluk kutukan. Dengan menyatu dengan artefak itu, dia terlibat dalam dunia Jujutsu dan belajar bagaimana mengendalikan kekuatan gelap yang mengancam umat manusia. Di bawah bimbingan Jujutsu Sorcerer, dia berjuang melawan makhluk-makhluk kutukan untuk melindungi dunia dari kehancuran.',
+            'image_path' => 'img/JujutsuKaisen.jpeg'
+        ]);
+
+        Book::create([
+            'title' => "To All the Boys I've Loved Before",
+            'category_id' => 3,
+            'slug' => 'to-all-the-boys',
+            'penulis' => 'Jenny Han',
+            'jumlah_tersedia' => 5,
+            'excerpt' => 'Dalam surat-surat cinta yang tak pernah ia kirimkan, Lara Jean menyimpan rahasia yang akan mengubah hidupnya. Ketika surat-surat itu secara misterius terbuka dan membuat kehidupan cintanya menjadi kacau, Lara Jean harus berusaha menemukan cara untuk mengatasi situasi yang semakin rumit.',
+            'sinopsis' => 'Lara Jean Covey, seorang remaja yang menulis surat-surat cinta rahasia kepada semua anak laki-laki yang pernah dia sukai, menemukan kehidupannya berubah secara mendadak ketika surat-surat itu, yang seharusnya hanya simpanan pribadinya, secara misterius terbuka dan dikirim kepada para penerima aslinya. Salah satunya adalah Peter Kavinsky, seorang atlet populer di sekolahnya. Saat kekacauan dimulai dengan munculnya surat-surat itu, Lara Jean dan Peter sepakat untuk memalsukan hubungan palsu, namun dalam prosesnya, mereka menemukan kedekatan yang nyata dan perasaan yang tumbuh di antara mereka. Dalam perjalanan yang penuh komedi dan pertumbuhan emosional, Lara Jean harus menghadapi rahasia yang terungkap dan menemukan keberanian untuk mengungkapkan perasaannya yang sebenarnya kepada orang yang dia cintai.',
+            'image_path' => 'img/ToAllTheBoysIveLovedBefore.jpeg'
+        ]);
+
+        Book::create([
+            'title' => "P.S. I Still Love You (To All the Boys I've Loved Before)",
+            'category_id' => 3,
+            'slug' => 'i-still-love-you',
+            'penulis' => 'Jenny Han',
+            'jumlah_tersedia' => 5,
+            'excerpt' => 'Ketika cinta masa lalu kembali menyapa, Lara Jean harus menavigasi perasaannya yang terbelah. Dalam petualangan cinta yang berliku, dia menemukan bahwa menghadapi pilihan yang sulit adalah bagian tak terpisahkan dari perjalanan menuju dewasa.',
+            'sinopsis' => 'Lara Jean Covey kembali hadir dalam kisah yang memikat ketika surat cintanya yang seharusnya rahasia kembali memicu kekacauan dalam kehidupannya. Saat John Ambrose McClaren, seorang penerima surat cinta masa lalu, kembali ke kehidupannya, Lara Jean harus berjuang melawan perasaannya yang terbelah antara masa lalu dan masa sekarang. Sementara itu, hubungannya dengan Peter Kavinsky, sang pacar, juga diuji oleh keraguan dan ketidakpastian. Dalam petualangan cinta yang berliku, Lara Jean menemukan bahwa menghadapi pilihan sulit adalah bagian tak terpisahkan dari perjalanan menuju kedewasaan, sambil mencari keberanian untuk mengungkapkan perasaan sejatinya.',
+            'image_path' => 'img/PSIStillLoveYou.jpeg'
+        ]);
+
+        Book::create([
+            'title' => "Always and Forever Lara Jean (To All the Boys I've Loved Before)",
+            'category_id' => 3,
+            'slug' => 'always-and-forever',
+            'penulis' => 'Jenny Han',
+            'jumlah_tersedia' => 5,
+            'excerpt' => 'Dalam kisah tentang cinta dan perubahan hidup, Lara Jean dan kekasihnya menemukan diri mereka di persimpangan yang tak terduga. Namun, ketika rencana-rencana masa depan mereka menjadi terancam, mereka harus bertanya pada diri sendiri apakah cinta mereka cukup kuat untuk menghadapi rintangan yang tak terduga?',
+            'sinopsis' => 'Lara Jean Covey bersama dengan kekasihnya, Peter Kavinsky, menikmati momen-momen indah dalam hubungan mereka. Namun, ketika mereka memasuki tahap akhir sekolah menengah, rencana-rencana mereka untuk masa depan mulai goyah. Saat Lara Jean berjuang untuk menemukan jalan yang tepat dalam rencana-rencana universitasnya, dia menemukan dirinya dihadapkan pada pertanyaan besar: apakah cinta mereka cukup kuat untuk mengatasi rintangan dan perubahan besar yang mengancam hubungan mereka?',
+            'image_path' => 'img/AlwaysAndForever.jpeg'
+        ]);
+
+        Book::create([
+            'title' => "Attack on Titan",
+            'category_id' => 5,
+            'slug' => 'attack-on-titan',
+            'penulis' => 'Hajime Isayama',
+            'jumlah_tersedia' => 5,
+            'excerpt' => 'Dunia yang dikuasai oleh ketakutan akan Titan, makhluk raksasa yang mengancam kelangsungan hidup umat manusia. Eren Yeager, seorang remaja yang kehilangan segalanya dalam serangan Titan, bersumpah untuk membalas dendam dan mengungkap misteri di balik keberadaan mereka. Dalam perjalanan untuk memahami rahasia-rahasia gelap ini, Eren bersama dengan Mikasa dan Armin harus berhadapan dengan pertarungan epik dan konspirasi yang mengguncang pondasi dunia yang mereka ketahui.',
+            'sinopsis' => 'Dalam dunia yang dikuasai oleh kehadiran mengerikan Titan, umat manusia terkurung dalam dinding besar yang menjadi benteng terakhir mereka. Namun, ketika dinding itu diretas oleh Titan Kolosal, segala yang mereka ketahui berubah. Eren Yeager, seorang pemuda yang kehilangan ibunya dalam serangan Titan, bersumpah untuk membalas dendam dan memahami kebenaran di balik keberadaan makhluk itu. Bersama dengan sahabatnya, Mikasa Ackerman, dan Armin Arlert, mereka bergabung dalam Survey Corps, sebuah kelompok elit yang bertarung melawan Titan. Namun, di tengah pertempuran yang keras, mereka menemukan konspirasi yang mengguncangkan dasar dari apa yang mereka yakini selama ini. Sementara Eren membangun kekuatan misterius yang bisa mengubah permainan, mereka harus menavigasi intrik politik dan rahasia gelap yang bisa mengubah nasib umat manusia. Dalam perjalanan yang penuh dengan pertempuran epik dan pengkhianatan tak terduga, mereka harus menemukan kebenaran sebelum dunia yang mereka ketahui runtuh di tangan para Titan yang mengancam keberlangsungan hidup manusia.',
+            'image_path' => 'img/AttackOnTitan.jpeg'
+        ]);
+
+        Book::create([
+            'title' => "Crazy Rich Asians",
+            'category_id' => 4,
+            'slug' => 'crazy-rich-asians',
+            'penulis' => 'Kevin Kwan',
+            'jumlah_tersedia' => 5,
+            'excerpt' => 'Dalam kisah yang dipenuhi kekayaan berlimpah dan intrik sosial, Crazy Rich Asians membawa kita ke dunia Rachel Chu yang terkejut ketika dia mengetahui bahwa pacarnya, Nick Young, adalah bagian dari salah satu keluarga terkaya di Singapura. Mereka harus menavigasi intrik dan ekspektasi sosial yang menguji hubungan mereka, membawa penonton dalam petualangan yang mencengangkan di antara gaya hidup glamor, kekayaan berlimpah, dan perbedaan budaya yang kontras.',
+            'sinopsis' => 'Rachel Chu, seorang profesor di New York, terkejut ketika dia diajak oleh pacarnya, Nick Young, untuk mengunjungi Singapura dan bertemu dengan keluarganya. Namun, yang tidak diketahui Rachel adalah bahwa Nick bukan hanya seorang pria biasa, tetapi bagian dari salah satu keluarga terkaya di Singapura. Saat mereka memasuki dunia yang dipenuhi kekayaan, Rachel harus berhadapan dengan ekspektasi sosial, intrik keluarga, dan persaingan yang rumit dari kaum elite. Sementara Rachel berusaha menavigasi ujian dalam hubungannya dengan Nick, dia menyadari bahwa menjadi bagian dari keluarga Crazy Rich Asians memiliki harga dan konsekuensi yang tak terduga. Film ini membawa penonton dalam perjalanan yang menggoda dan menghibur melalui gaya hidup gemerlap, dramatisasi sosial, dan komedi yang mengharukan.',
+            'image_path' => 'img/CrazyRichAsians.jpeg'
+        ]);
+
+        Book::create([
+            'title' => "Daun yang Jatuh Tak Pernah Menyalahkan Angin",
+            'category_id' => 4,
+            'slug' => 'daun-yang-jatuh-tak-pernah-menyalahkan-angin',
+            'penulis' => 'Tere Liye',
+            'jumlah_tersedia' => 5,
+            'excerpt' => 'Daun yang jatuh tak pernah membenci angin, dia membiarkan dirinya jatuh begitu saja. Tak melawan. Mengikhlaskan semuanya.',
+            'sinopsis' => 'Tania, seorang gadis berusia 12 tahun yang terpaksa putus sekolah dan mengamen bersama adiknya setelah kepergian ayah mereka. Mereka tinggal dalam kekurangan di rumah kardus di pinggir kota. Namun, hidup Tania berubah ketika mereka bertemu dengan Danar, seorang pria yang bagaikan malaikat bagi keluarga tersebut. Pertemuan tak terduga ini membawa perubahan besar dalam hidup mereka. Danar membiayai mereka untuk kembali sekolah, membantu ibu Tania memulai usaha kue, dan mengembalikan kebahagiaan yang hilang. Tania, menjadi siswi terpintar di sekolah, meraih banyak kesuksesan dalam waktu singkat. Namun, kebahagiaan mereka terhenti ketika ibu mereka meninggal, menguji ketegaran Tania yang tengah menuju kelulusan sekolah dasar. Meskipun kehilangan yang berat itu, Tania berjuang maju, diterima di sekolah menengah di Singapura, memutuskan melanjutkan pendidikannya untuk menghormati ibunya dan malaikatnya, Danar. Kisah ini memperlihatkan perjuangan Tania, pencapaian gemilangnya, serta perasaan tumbuh dewasa dan rindu yang dialaminya. Hubungan khusus dengan Danar membuatnya mengerti arti kehilangan dan menerima takdirnya. Namun, perasaannya berakhir ketika Danar mengumumkan pernikahannya dengan Ratna. ',
+            'image_path' => 'img/DaunYangJatuh.jpeg'
+        ]);
+
+        Book::create([
+            'title' => "My Hero Academia",
+            'category_id' => 5,
+            'slug' => 'my-hero-academia',
+            'penulis' => 'Kohei Horikoshi',
+            'jumlah_tersedia' => 5,
+            'excerpt' => 'Dalam dunia di mana hampir semua orang memiliki kekuatan super yang disebut Quirk, seorang remaja bernama Izuku Midoriya lahir tanpa kekuatan apa pun. Tetapi, ketika dia bertemu dengan pahlawan legendaris All Might, segalanya berubah. All Might memilihnya sebagai penerus Quirk-nya, One For All, dan membawanya ke sekolah pahlawan terbaik di dunia, UA High School. Namun, di tengah tantangan besar dan persaingan yang ketat, Izuku harus menemukan jati dirinya dan menghadapi musuh-musuh yang mengancam perdamaian dunia.',
+            'sinopsis' => 'Izuku Midoriya, seorang remaja yang lahir di dunia di mana hampir semua orang memiliki kekuatan super yang disebut Quirk. Namun, Izuku terlahir tanpa Quirk apa pun, suatu hal yang langka dalam masyarakat tersebut. Meskipun demikian, tekad dan semangatnya untuk menjadi seorang pahlawan seperti idolanya, All Might, tidak pernah pudar. Saat dia bertemu dengan All Might dan menunjukkan keberaniannya, Izuku dipilih sebagai penerus Quirk legendaris, One For All. Dibimbing oleh All Might, Izuku mulai belajar di UA High School, sekolah pahlawan ternama di dunia. Di sana, dia bertemu dengan berbagai teman sekelas, antara lain Katsuki Bakugo, Ochaco Uraraka, Shoto Todoroki, dan lainnya, yang masing-masing memiliki ambisi dan tujuan mereka sendiri. Di tengah persaingan di sekolah yang ketat, mereka belajar mengendalikan kekuatan mereka dan mempersiapkan diri menghadapi ancaman yang datang dari para penjahat super yang ingin mengganggu perdamaian dunia.',
+            'image_path' => 'img/MyHeroAcademia.jpeg'
+        ]);
+
+        Book::create([
+            'title' => "Negeri 5 Menara",
+            'category_id' => 4,
+            'slug' => 'negeri-5-menara',
+            'penulis' => 'Ahmad Fuadi',
+            'jumlah_tersedia' => 5,
+            'excerpt' => 'Di tengah pegunungan yang menjulang tinggi, lima menara menjulang tegak, menyisakan jejak kehidupan para santri di pesantren terpencil. Lima remaja dari berbagai latar belakang dan etnis saling bersua di Pondok Madani, mereka adalah Alif, Raja, Said, Dulmajid, dan juga Muslim. Mereka memiliki impian yang sama, yaitu mengejar cita-cita melalui pendidikan di pesantren ini. Namun, tantangan, pertemanan, dan pengalaman hidup yang berbeda membawa mereka pada perjalanan pribadi yang unik di dalam dan di luar lingkungan pesantren.',
+            'sinopsis' => 'Negeri 5 Menara mengisahkan perjalanan lima remaja dari sudut pandang Alif, seorang anak dari keluarga yang sangat sederhana. Di Pondok Madani, pesantren yang terletak di tengah pegunungan, ia bertemu dengan empat remaja lainnya: Raja, Said, Dulmajid, dan Muslim. Mereka semua memiliki impian yang besar, meskipun dari latar belakang yang berbeda. Bersama-sama, mereka menjalani kehidupan pesantren yang penuh dengan tantangan, belajar ilmu agama, dan juga menjalin persahabatan yang erat. Namun, meskipun berjuang untuk mencapai tujuan mereka, setiap remaja mengalami perjalanan pribadi yang unik, menghadapi ujian dan cobaan hidup yang mengubah pandangan mereka tentang kehidupan dan impian masing-masing',
+            'image_path' => 'img/Negeri5Menara.jpeg'
+        ]);
+
     
         Category::create([
             'name' => 'Pemrograman',
