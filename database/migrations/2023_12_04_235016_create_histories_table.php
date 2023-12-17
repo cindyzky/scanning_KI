@@ -18,6 +18,12 @@ return new class extends Migration
             $table->timestamp('borrowed_at')->nullable();
             $table->timestamp('returned_at')->nullable();
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('book_id')->references('id')->on('books')->onDelete('cascade');
+
+            $table->index('user_id');
+            $table->index('book_id');
         });
     }
 

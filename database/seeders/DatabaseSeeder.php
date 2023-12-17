@@ -307,9 +307,9 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Book::create([
-            'title' => "Daun yang Jatuh Tak Pernah Menyalahkan Angin",
+            'title' => "Daun yang Jatuh Tak Pernah Membenci Angin",
             'category_id' => 4,
-            'slug' => 'daun-yang-jatuh-tak-pernah-menyalahkan-angin',
+            'slug' => 'daun-yang-jatuh-tak-pernah-membenci-angin',
             'penulis' => 'Tere Liye',
             'jumlah_tersedia' => 5,
             'excerpt' => 'Daun yang jatuh tak pernah membenci angin, dia membiarkan dirinya jatuh begitu saja. Tak melawan. Mengikhlaskan semuanya.',
