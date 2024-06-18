@@ -25,12 +25,13 @@
 
       <!-- Search bar -->
         <div class="search-container">
-          <form action="/login" class="search">
+          <form action="/BooksData" method="GET" class="search">
               <input
                 class="search-input"
                 type="text"
                 id="searchInput"
                 placeholder="Cari Judul Buku, Penulis"
+                value="{{ request('search') }}"
                 />
               <button type="submit" class="search-button">
               <i class="fa-solid fa-magnifying-glass fa-2xl"></i>
