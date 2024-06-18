@@ -13,6 +13,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- IKON -->
     <script src="https://kit.fontawesome.com/74ee38b4ad.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/74ee38b4ad.js" crossorigin="anonymous"></script>
 
     <!-- BOOTSTRAPS PROFILE -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -57,10 +58,17 @@
           </a>
         </li>
         <li class="log_out">
+        @if(auth()->check())
           <a href="/">
             <i class="bx bx-log-out"></i>
             <span class="links_name">Log out</span>
           </a>
+        @else
+        <a href="/login">
+            <i class="fa-solid fa-right-to-bracket"></i>
+            <span class="links_name">Login</span>
+          </a>
+        @endif
         </li>
       </ul>
     </div>
@@ -80,6 +88,7 @@
                 <i class="fa-regular fa-bell fa-2xl"></i>
         </div>
         <div class="profile-details dropdown">
+          @if(auth()->check())
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               @if(auth()->user()->profile_picture)
                   <img class="ellipse" src="{{ asset('storage/profile_pictures/' . auth()->user()->profile_picture) }}" alt="Profile Picture"/>
@@ -93,6 +102,9 @@
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="/">Logout</a></li>
           </ul>
+          @else
+            <a class="nav-link" href="/login"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+          @endif
         </div>
 
       </nav>

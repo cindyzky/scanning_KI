@@ -60,3 +60,5 @@ Route::post('/books/return/{borrow}', [HistoryController::class, 'return'])->nam
 Route::get('/History', [HistoryController::class, 'index']);
 
 Route::post('/books/removeWaitlist/{id}', [WaitingListController::class, 'removeWaitlist'])->name('books.removeWaitlist');
+
+Route::get('/books', [BookController::class, 'index'])->name('books.index');

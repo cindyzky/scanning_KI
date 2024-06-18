@@ -6,17 +6,19 @@
 @endsection
 
 @section('content')
+
 @if(session()->has('borrowError'))
     <div class="alert alert-danger alert-dismissible fade show" role="alert">
     {{ session('borrowError') }}
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 @endif
-    @if($books->isEmpty())
-        <div class="not-found">
-            <h1>Book not found!!! Please try another keyword</h1>
-        </div>
-    @else
+
+@if($books->isEmpty())
+    <div class="not-found">
+        <h1>Book not found!!! Please try another keyword</h1>
+    </div>
+@else
     <div class="books" id='borrowedBooks'>
         <article>
         <h1>List of Books</h1>
@@ -30,16 +32,22 @@
                         <p class="jumlah_tersedia">Available Books: {{ $book->jumlah_tersedia }} books</p>
                         <p class="excerpt">{{ $book->excerpt }}</p>
                         <a href="/BookDetails/{{ $book->slug }}">Read More...</a>
-                        @if($book->jumlah_tersedia == 0)
-                            <form method="POST" action="{{ route('books.waitlist', ['book' => $book->id]) }}">
-                                @csrf
-                                <button type="submit" class="waiting-list-button">ADD WAITING LIST</button>
-                            </form>
+                        @if(auth()->check())
+                            @if($book->jumlah_tersedia == 0)
+                                <form method="POST" action="{{ route('books.waitlist', ['book' => $book->id]) }}">
+                                    @csrf
+                                    <button type="submit" class="waiting-list-button">ADD WAITING LIST</button>
+                                </form>
+                            @else
+                                <form method="POST" action="{{ route('books.borrow', ['book' => $book->id]) }}">
+                                    @csrf
+                                    <button type="submit" class="borrow-button">BORROW</button>
+                                </form>
+                            @endif
                         @else
-                            <form method="POST" action="{{ route('books.borrow', ['book' => $book->id]) }}">
-                                @csrf
-                                <button type="submit" class="borrow-button">BORROW</button>
-                            </form>
+                        <form method="GET" action="/login">
+                                    <button type="submit" class="borrow-button">BORROW</button>
+                                </form>
                         @endif
                     </div>
                 </div>

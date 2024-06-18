@@ -249,7 +249,8 @@ nav .search-box .bx-search {
 
 .book-details {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 .book-details img {

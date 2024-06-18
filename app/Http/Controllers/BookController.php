@@ -15,12 +15,16 @@ class BookController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $books = Book::query()->filter(request(['search', 'category']))->orderBy('title', 'asc')->paginate(7)->withQueryString();
+        $search = $request->input('search');
+        $books = Book::query()->when($search, function ($query, $search) {
+                    return $query->filter(request(['search', 'category']));})->orderBy('title', 'asc')->paginate(7)->withQueryString();
+    
         return view('booksData', compact('books'), [
             "title" => "Books Katalog"
         ]);
+        
     }
 
     public function indexHome()
