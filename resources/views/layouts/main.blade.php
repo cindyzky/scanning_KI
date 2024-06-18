@@ -60,10 +60,13 @@
         </li>
         <li class="log_out">
         @if(auth()->check())
-          <a href="/">
-            <i class="bx bx-log-out"></i>
-            <span class="links_name">Log out</span>
-          </a>
+        <form action="/logout" method="POST" class="logout-form">
+                        @csrf
+                        <button type="submit" class="logout-button {{ ($title === 'Logout') ? 'active' : '' }}">
+                            <i class="bx bx-log-out"></i>
+                            <span class="links_name">Log out</span>
+                        </button>
+                    </form>
         @else
         <a href="/login">
             <i class="fa-solid fa-right-to-bracket"></i>
@@ -110,26 +113,11 @@
             </li>
             </ul>
           </div>
+          
         @else
-        <div class="profile-details dropdown">
-          @if(auth()->check())
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <img class="ellipse" src="{{ asset('img/Profile3.jpeg') }}" alt="Profile Picture"/>
-            <span class="admin_name">Guest</span>
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li>
-              <form action="/login" method="GET">
-                  @csrf
-                  <button type="submit" class="dropdown-item"><i class="bi bi-box-arrow-in-right"></i> Login</button>
-              </form>
-          </li>
-          </ul>
-          @else
-            <a class="nav-link" href="/login"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
-          @endif
-        </div>
+        <a class="nav-link" href="/login"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
         @endauth
+
         
 
       </nav>
