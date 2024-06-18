@@ -111,24 +111,7 @@
             </ul>
           </div>
         @else
-        <div class="profile-details dropdown">
-          @if(auth()->check())
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <img class="ellipse" src="{{ asset('img/Profile3.jpeg') }}" alt="Profile Picture"/>
-            <span class="admin_name">Guest</span>
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li>
-              <form action="/login" method="GET">
-                  @csrf
-                  <button type="submit" class="dropdown-item"><i class="bi bi-box-arrow-in-right"></i> Login</button>
-              </form>
-          </li>
-          </ul>
-          @else
-            <a class="nav-link" href="/login"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
-          @endif
-        </div>
+          <a class="nav-link" href="/login"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
         @endauth
         
 
