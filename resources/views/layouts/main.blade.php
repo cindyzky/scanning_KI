@@ -22,6 +22,7 @@
 
    <!-- BOOTSTRAPS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
@@ -87,25 +88,49 @@
         <div class="notification-bell">
                 <i class="fa-regular fa-bell fa-2xl"></i>
         </div>
+        
+        @auth
+          <div class="profile-details dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                @if(auth()->user()->profile_picture)
+                    <img class="ellipse" src="{{ asset('storage/profile_pictures/' . auth()->user()->profile_picture) }}" alt="Profile Picture"/>
+                @else
+                    <img class="ellipse" src="{{ asset('img/Profile3.jpeg') }}" alt="Profile Picture"/>
+                @endif
+              <span class="admin_name">{{ auth()->user()->username }}</span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/Profile"><i class="bi bi-person-lines-fill"></i> Profile</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <form action="/logout" method="POST">
+                    @csrf
+                    <button type="submit" class="dropdown-item"><i class="bi bi-box-arrow-left"></i> Logout</button>
+                </form>
+            </li>
+            </ul>
+          </div>
+        @else
         <div class="profile-details dropdown">
           @if(auth()->check())
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              @if(auth()->user()->profile_picture)
-                  <img class="ellipse" src="{{ asset('storage/profile_pictures/' . auth()->user()->profile_picture) }}" alt="Profile Picture"/>
-              @else
-                  <img class="ellipse" src="{{ asset('img/Profile3.jpeg') }}" alt="Profile Picture"/>
-              @endif
-            <span class="admin_name">{{ auth()->user()->username }}</span>
+              <img class="ellipse" src="{{ asset('img/Profile3.jpeg') }}" alt="Profile Picture"/>
+            <span class="admin_name">Guest</span>
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/Profile">Profile</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/">Logout</a></li>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <form action="/login" method="GET">
+                  @csrf
+                  <button type="submit" class="dropdown-item"><i class="bi bi-box-arrow-in-right"></i> Login</button>
+              </form>
+          </li>
           </ul>
           @else
             <a class="nav-link" href="/login"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
           @endif
         </div>
+        @endauth
+        
 
       </nav>
       <div class="main-content">

@@ -5,9 +5,7 @@
     <title>Homepage</title>
     <link rel="stylesheet" href="css/homeStyle.css" />
     <!-- IKON -->
-    <script
-      src="https://kit.fontawesome.com/74ee38b4ad.js"
-      crossorigin="anonymous"
+    <script src="https://kit.fontawesome.com/74ee38b4ad.js" crossorigin="anonymous"
     ></script>
   </head>
 
@@ -32,6 +30,7 @@
               </button>
           </form>
         </div>
+
 
       <!-- SLIDE -->
       <div class="slide">

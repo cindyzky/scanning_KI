@@ -19,7 +19,7 @@
                 <h1>Login</h1>
                 <hr>
                 <label for="">Email</label>
-                <input class="form-control @error('email') is-invalid @enderror" type="email" placeholder="EMAIL*" name="email" id="email" autofocus required>
+                <input class="form-control @error('email') is-invalid @enderror" type="email" placeholder="EMAIL*" name="email" id="email" autofocus required="{{ old ('email') }}">
                 @error('email')
                 <div class="invalid-feedback">
                     {{ $message }}

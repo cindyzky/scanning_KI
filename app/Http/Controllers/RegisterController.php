@@ -18,18 +18,16 @@ class RegisterController extends Controller
     public function store(Request $request)
     {
        $validatedData = $request->validate([
-        'username' => 'required|max:255',
+        'username' => 'required|max:255|unique:users',
         'email' => 'required|email:dns|unique:users',
         'nim' => 'required|digits:15|unique:users',
-        'password' => 'required|min:8|max:225'
+        'password' => 'required|min:8|max:255'
        ]);
 
        $validatedData['password'] = Hash::make($validatedData['password']);
 
        User::create($validatedData);
-       
-       $request->session()->flash('success', 'Registration succesfull! Please Login');
 
-       return redirect('/login');
+       return redirect('/login')->with('success', 'Registration succesfull! Please Login');
     }
 }

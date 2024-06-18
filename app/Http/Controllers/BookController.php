@@ -26,7 +26,7 @@ class BookController extends Controller
         ]);
         
     }
-
+    
     public function indexHome()
     {
         $books = Book::all();
