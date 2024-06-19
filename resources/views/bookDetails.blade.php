@@ -17,7 +17,13 @@
         <article class="mb-5">
         <div class="book-item">
             <div class="book-details">
-                <img src="{{ asset($bookDetail->image_path) }}" alt="{{ $bookDetail->title }}" style="max-width: 200px; height: auto;">
+            @if($bookDetail->image_path)
+                    @if(Str::startsWith($bookDetail->image_path, 'book_covers'))
+                        <img src="{{ asset('storage/' . $bookDetail->image_path) }}" alt="{{ $bookDetail->title }}" style="max-width: 200px; height: auto;">
+                    @else
+                        <img src="{{ asset($bookDetail->image_path) }}" alt="{{ $bookDetail->title }}" style="max-width: 200px; height: auto;">
+                    @endif
+                @endif
                 <div class="book-info">
                     <h2>{{ $bookDetail->title }}</h2>
                     <p class="author">Author: {{ $bookDetail->penulis }}</p>
@@ -42,7 +48,7 @@
                                 @csrf
                                 <button type="submit" class="borrow-button">RETURN</button>
                             </form>
-                            <form method="POST" action="{{ route('books.waitlist', ['book' => $bookDetail->id]) }}">
+                            <form method="POST" action="{{ route('books.waitlist', ['book' => $bookDetail->slug]) }}">
                                 @csrf
                                 <button type="submit" class="waiting-list-button">ADD WAITING LIST</button>
                             </form>

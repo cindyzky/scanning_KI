@@ -12,6 +12,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\WaitingListController;
 use App\Http\Controllers\ForgotPasswordController;
+use App\Http\Controllers\AdminBooksController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,7 +24,7 @@ use App\Http\Controllers\ForgotPasswordController;
 |
 */
 
-Route::get('/', [BookController::class, 'indexHome']);
+Route::get('/', [BookController::class, 'indexHome'])->middleware('guest');
 
 Route::get('/register', [RegisterController::class, 'index']);
 Route::post('/register', [RegisterController::class, 'store']);
@@ -63,3 +64,5 @@ Route::get('/History', [HistoryController::class, 'index'])->middleware('auth');
 Route::post('/books/removeWaitlist/{id}', [WaitingListController::class, 'removeWaitlist'])->name('books.removeWaitlist');
 
 Route::get('/books', [BookController::class, 'index'])->name('books.index');
+
+Route::resource('/AdminBooks', AdminBooksController::class)->middleware('admin');

@@ -75,6 +75,18 @@
         @endif
         </li>
       </ul>
+
+      @can('admin')
+      <h6 class="links-name text-center text-white pt-20">Administrator</h6>
+        <ul class="nav-links">
+        <li>
+            <a href="/AdminBooks" class="{{ ($title === 'Books') ? 'active' : '' }}">
+            <i class="fa-solid fa-book-bookmark"></i>
+              <span class="links_name">Books</span>
+            </a>
+          </li>
+        </ul>
+        @endcan
     </div>
 
     <section class="home-section">

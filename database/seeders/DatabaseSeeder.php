@@ -7,6 +7,7 @@ use Illuminate\Database\Seeder;
 use App\Models\User;
 use App\Models\Book;
 use App\Models\Category;
+use Illuminate\Support\Facades\File;
 
 class DatabaseSeeder extends Seeder
 {
@@ -369,6 +370,9 @@ class DatabaseSeeder extends Seeder
             'name' => 'Fantasi',
             'slug' => 'fantasi'
         ]);
+
+        //Book seeds
         
     }
+
 }

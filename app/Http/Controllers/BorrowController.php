@@ -15,7 +15,7 @@ class BorrowController extends Controller
      */
     public function index()
     {
-        $borrows = Borrow::orderBy('borrowed_at', 'desc')->paginate(5);
+        $borrows = Borrow::where('user_id', auth()->user()->id)->with('book')->orderBy('borrowed_at', 'desc')->paginate(5);
         return view('borrowedBooks', [
             'title' => 'Borrowed Books',
             'borrows' => $borrows

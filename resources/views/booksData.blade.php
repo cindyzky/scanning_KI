@@ -25,7 +25,13 @@
         @foreach($books as $book)
             <div class="book-item">
                 <div class="book-details">
-                    <img src="{{ asset($book->image_path) }}" alt="{{ $book->title }}" style="max-width: 200px; height: auto;">
+                @if($book->image_path)
+                    @if(Str::startsWith($book->image_path, 'book_covers'))
+                        <img src="{{ asset('storage/' . $book->image_path) }}" alt="{{ $book->title }}" style="max-width: 200px; height: auto;">
+                    @else
+                        <img src="{{ asset($book->image_path) }}" alt="{{ $book->title }}" style="max-width: 200px; height: auto;">
+                    @endif
+                @endif
                     <div class="book-info">
                         <h3><a href="/BookDetails/{{ $book->slug }}">{{ $book->title }}</a></h3>
                         <p class="author">Author: {{ $book->penulis }}</p>
@@ -34,12 +40,12 @@
                         <a href="/BookDetails/{{ $book->slug }}">Read More...</a>
                         @if(auth()->check())
                             @if($book->jumlah_tersedia == 0)
-                                <form method="POST" action="{{ route('books.waitlist', ['book' => $book->id]) }}">
+                                <form method="POST" action="{{ route('books.waitlist', ['book' => $book->slug]) }}">
                                     @csrf
                                     <button type="submit" class="waiting-list-button">ADD WAITING LIST</button>
                                 </form>
                             @else
-                                <form method="POST" action="{{ route('books.borrow', ['book' => $book->id]) }}">
+                                <form method="POST" action="{{ route('books.borrow', ['book' => $book->slug]) }}">
                                     @csrf
                                     <button type="submit" class="borrow-button">BORROW</button>
                                 </form>

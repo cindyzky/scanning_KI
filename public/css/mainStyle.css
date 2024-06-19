@@ -427,6 +427,33 @@ nav .search-box .bx-search {
     background: #081d45;
 }
 
+/* UNTUK KOLOM ADMIN */
+.action-column {
+    width: 100px;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.action-buttons .badge {
+    margin: 0 5px;
+}
+
+/* ADD BOOKS */
+.section-add {
+    display: flex;
+    border-radius: 0.5rem;
+    background: #f5f5f5;
+    justify-content: center;
+    min-height: 20vh;
+    width: 97%;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
 /* Responsive Media Query */
 @media (max-width: 1240px) {
     .sidebar {
