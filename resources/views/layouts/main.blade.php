@@ -115,11 +115,7 @@
           </div>
           
         @else
-<<<<<<< HEAD
           <a class="nav-link" href="/login"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
-=======
-        <a class="nav-link" href="/login"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
->>>>>>> 6782910834b518734035b1bb95e405ebf4a064fc
         @endauth
 
         
