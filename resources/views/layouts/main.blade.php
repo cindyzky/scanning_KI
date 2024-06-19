@@ -60,10 +60,13 @@
         </li>
         <li class="log_out">
         @if(auth()->check())
-          <a href="/">
-            <i class="bx bx-log-out"></i>
-            <span class="links_name">Log out</span>
-          </a>
+        <form action="/logout" method="POST" class="logout-form">
+                        @csrf
+                        <button type="submit" class="logout-button {{ ($title === 'Logout') ? 'active' : '' }}">
+                            <i class="bx bx-log-out"></i>
+                            <span class="links_name">Log out</span>
+                        </button>
+                    </form>
         @else
         <a href="/login">
             <i class="fa-solid fa-right-to-bracket"></i>
@@ -110,9 +113,15 @@
             </li>
             </ul>
           </div>
+          
         @else
+<<<<<<< HEAD
           <a class="nav-link" href="/login"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+=======
+        <a class="nav-link" href="/login"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+>>>>>>> 6782910834b518734035b1bb95e405ebf4a064fc
         @endauth
+
         
 
       </nav>
