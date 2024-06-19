@@ -127,7 +127,7 @@
           </div>
           
         @else
-        <a class="nav-link" href="/login"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+          <a class="nav-link" href="/login"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
         @endauth
 
         
